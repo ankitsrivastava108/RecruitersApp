@@ -1,12 +1,14 @@
 package com.khoslalabs.recruiters;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ import retrofit.client.Response;
 public class First_Fragment extends android.support.v4.app.Fragment {
     private ListView listView;
     private RecruiterAdapter recruiterAdapter;
+    Naukri n;
 
     @Nullable
     @Override
@@ -39,6 +42,7 @@ public class First_Fragment extends android.support.v4.app.Fragment {
                 recruiterAdapter = new RecruiterAdapter(getActivity(), naukri.getResults().getCollection1());
                 listView.setAdapter(recruiterAdapter);
                 Log.d("jdtgv","Recruiterapi called" );
+                n= naukri;
                 //Toast.makeText(getActivity(), "Number Of Entries" + naukri.getResults(), Toast.LENGTH_SHORT).show();
             }
 
@@ -48,7 +52,20 @@ public class First_Fragment extends android.support.v4.app.Fragment {
             }
         });
 
+listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+        Intent intent= new Intent(getActivity(), MainActivity.class);
+        /*String activejobs= n.getResults().getCollection1().get(position).getActiveJobs().getText();
+        String location= n.getResults().getCollection1().get(position).getLocation();
+        String activejobs= n.getResults().getCollection1().get(position).getActiveJobs().getText();
+        intent.putExtra("Recruiters",) ;*/
+        intent.putExtra("recruiterlist", n);
+        intent.putExtra("pos",position);
+        getActivity().startActivity(intent);
+    }
+});
 
 
         return view;

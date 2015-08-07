@@ -4,8 +4,10 @@ package com.khoslalabs.recruiters.models;
 
 import com.google.gson.annotations.Expose;
 
+import java.io.Serializable;
 
-public class Image {
+
+public class Image implements Serializable {
 
     @Expose
     private String href;

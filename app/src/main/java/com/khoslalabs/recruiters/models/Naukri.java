@@ -4,8 +4,10 @@ package com.khoslalabs.recruiters.models;
 
 import com.google.gson.annotations.Expose;
 
+import java.io.Serializable;
 
-public class Naukri {
+
+public class Naukri implements Serializable {
 
     @Expose
     private String name;

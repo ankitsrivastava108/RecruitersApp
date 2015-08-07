@@ -4,8 +4,10 @@ package com.khoslalabs.recruiters.models;
 
 import com.google.gson.annotations.Expose;
 
+import java.io.Serializable;
 
-public class Collection1 {
+
+public class Collection1 implements Serializable{
 
     @Expose
     private Image image;

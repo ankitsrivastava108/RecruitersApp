@@ -82,6 +82,7 @@ public class RecruiterAdapter extends BaseAdapter {
 
         //if(collection1.getImage().getSrc()!="") {
             viewHolder.RecruiterName.setText(collection1.getName().getText());
+        viewHolder.Skills.setText(collection1.getSkills());
         if(collection1.getImage().getSrc()!="") {
             Picasso
                     .with(contextWeakReference.get())
