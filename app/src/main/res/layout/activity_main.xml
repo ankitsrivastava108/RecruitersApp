@@ -16,33 +16,35 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/main_location"
+        android:id="@+id/main_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:textStyle="bold"
+
         android:layout_below="@+id/main_name"
         android:layout_centerHorizontal="true"
 
         />
 
     <TextView
-        android:id="@+id/main_position"
+        android:id="@+id/main_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_below="@+id/main_location"
+
+        android:layout_below="@+id/main_position"
         android:layout_centerHorizontal="true"
 
         />
+
+
     <TextView
         android:id="@+id/main_activejobs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_below="@+id/main_position"
+
+        android:layout_below="@+id/main_location"
         android:layout_centerHorizontal="true"
 
         />
